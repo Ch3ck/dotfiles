@@ -1,0 +1,23 @@
+[apply]
+	# Detect whitespace errors when applying a patch.
+	whitespace = fix
+
+[branch]
+	# Show most recently changed branches first.
+	sort = -committerdate
+[commit]
+	gpgsign = true
+[credential "https://github.com"]
+	helper = gh auth git-credential
+[gpg]
+	program = /usr/bin/gpg
+[push]
+	default = current
+[pull]
+	rebase = true
+[fetch]
+    prune = true
+[init]
+	defaultBranch = master
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
