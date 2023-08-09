@@ -65,7 +65,7 @@ install_deps() {
 # Function to install frontend tools (TypeScript, npm, Yarn)
 install_frontend_tools() {
     echo " --- Installing Frontend Tools (TypeScript, npm, Yarn) --- "
-    sudo npm install npm@latest npx typescript@latest firebase-tools@latest yarn@latest react@latest react-dom@latest
+    sudo npm install -g npm@latest typescript@latest yarn@latest
 }
 
 # Function to setup GitHub SSH and GPG keys
@@ -89,7 +89,7 @@ setup_github_keys() {
     if ! gpg_key_exists_on_github; then
         echo " --- Setting up GitHub GPG key via gh CLI --- "
         gpg_key_id=$(gpg --list-secret-keys --keyid-format=long | awk '/^sec/{print $2}' | awk -F'/' '{print $2; exit}')
-        gpg --armor --export "${gpg_key_id}" | gh gpg-key add -t "${FIRST_NAME}-${LAST_NAME}-macbook-pro-16"
+        gpg --armor --export "${gpg_key_id}" | gh gpg-key add -t "${FIRST_NAME}-${LAST_NAME}-macbook-pro"
         git config --global user.signingkey "$gpg_key_id"
     else
         echo "A GPG key already exists on GitHub. Skipping GPG key export."

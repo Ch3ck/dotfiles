@@ -51,3 +51,6 @@ Module.symvers
 Mkfile.old
 dkms.conf
 token.txt
+node_modules
+package.json
+package-lock.json
