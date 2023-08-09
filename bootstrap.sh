@@ -73,7 +73,7 @@ setup_github_keys() {
     # Authenticate with GitHub CLI
     echo " --- Running GitHub CLI setup ---"
     echo " --- Authenticating with GitHub via CLI --- "
-    gh auth login -p ssh --with-token <token.txt
+   # gh auth login -p ssh --with-token <token.txt
     gh auth setup-git
 
     if ! ssh_key_exists_on_github; then
