@@ -1,6 +1,6 @@
 # dotfiles
 
-Hacker defaults for macbook
+Hacker dotfile defaults for macbook
 
 ## Usage
 
